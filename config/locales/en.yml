@@ -30,4 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_title: "Coursework App"
+  app_description: "Coursework app description"
+
+  home:
+    home:
+      title: My Coursework
+      welcome: Welcome to my coursework site!
