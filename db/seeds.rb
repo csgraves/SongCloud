@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+welcome = Album.where(title: 'Welcome').first
+welcome.delete if welcome
+albums = Album.create([title: 'Welcome', artist: 'To the notes app.', released: 2020-01-01])
