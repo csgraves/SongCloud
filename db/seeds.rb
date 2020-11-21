@@ -8,4 +8,4 @@
 
 welcome = Album.where(title: 'Welcome').first
 welcome.delete if welcome
-albums = Album.create([title: 'Welcome', artist: 'To the notes app.', released: 2020-01-01])
+albums = Album.create([title: 'Welcome', artist: 'To the notes app.', released: 20200101])

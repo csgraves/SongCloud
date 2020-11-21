@@ -10,6 +10,8 @@
   %b Released:
   = @album.released
 
-= link_to 'Edit', edit_album_path(@album)
+%p= link_to t('.addSong'), new_song_path(album_id: @album)
+
+= link_to t('.editSong'), edit_album_path(@album)
 \|
-= link_to 'Back', albums_path
+= link_to t('back'), albums_path

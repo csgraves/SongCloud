@@ -17,7 +17,7 @@ class AlbumsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create album" do
     assert_difference('Album.count') do
-      post albums_url, params: { album: { artist: @album.artist, released: @album.released, title: @album.title } }
+      post albums_url, params: { album: { artist: @album.artist, released: @album.released, title: @album.title + " create"} }
     end
 
     assert_redirected_to album_url(Album.last)

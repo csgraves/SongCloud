@@ -54,3 +54,9 @@ en:
     request_contact:
       no_email: You must supply an email address
       email_sent: Thank you. We will be in touch shortly.
+
+  albums:
+    show:
+      addSong: Add Song
+      editSong: Edit
+      back: Back
