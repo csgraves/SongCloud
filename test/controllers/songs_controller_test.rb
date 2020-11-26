@@ -11,10 +11,10 @@ class SongsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  #test "should get new" do
-  #  get get :new, album_id: @album #song_url(@song.title) passes
-  #  assert_response :success
-  #end
+  test "should get new" do
+    get song_url(@song) #passes get :new, album_id: @album
+    assert_response :success
+  end
 
   test "should create song" do
     assert_difference('Song.count') do
