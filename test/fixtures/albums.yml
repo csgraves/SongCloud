@@ -1,11 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+#Test Cases
+#No null user
 one:
+  user: one
   title: MyAlbum1
   artist: MyArtist1
   released: 2020-11-20
 
 two:
+  user: two
   title: MyAlbum2
   artist: MyArtist2
   released: 2020-11-20

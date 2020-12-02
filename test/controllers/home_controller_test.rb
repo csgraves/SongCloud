@@ -1,28 +1,35 @@
 require 'test_helper'
 
 class HomeControllerTest < ActionDispatch::IntegrationTest
+
+  #b/c added authenticate and using user signed in
+  include Devise::Test::IntegrationHelpers
+
+  #Test homepage displays correctly
   test "should get home" do
     get root_url
-    assert_select 'title', 'Coursework App'
-    assert_select 'h1', 'My Coursework'
-    assert_select 'p', 'Welcome to my coursework site!'
+    assert_select 'title', 'Songcloud'
+    assert_select 'h1', 'Songcloud'
+    assert_select 'p', 'Welcome to my Songcloud, the only place to store your music!'
 
 
     assert_response :success
   end
 
+  #Test contact page displays correctly
   test "should get contact" do
     get contact_url
     assert_response :success
 
     assert_template layout: 'application'
 
-    assert_select 'title', 'Coursework App'
+    assert_select 'title', 'Songcloud'
     assert_select 'h1', 'Contact Us'
     assert_select 'p', 'Complete the following form to get in touch with us.'
 
   end
 
+  #Missing email shouldn't allow
   test "should post request contact but no email" do
     post request_contact_url
     assert_response :redirect
@@ -30,6 +37,7 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_nil flash[:notice]
     end
 
+  #Correct details, should pass
   test "should post request contact" do
     post request_contact_url, params:
       {name: "Conor", email: "conor@com2025.com", telephone: "1234567890", message: "Hello"}

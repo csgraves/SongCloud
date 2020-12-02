@@ -4,10 +4,12 @@ class SongTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+  #sets property to one in the database from fixtures
   setup do
     @album = albums(:one)
   end
 
+  #Various song validation tests
   test 'empty song cannot be saved' do
     song = Song.new
     song.save

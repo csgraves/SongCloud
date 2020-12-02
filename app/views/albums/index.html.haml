@@ -16,10 +16,10 @@
         %td= album.title
         %td= album.artist
         %td= album.released
-        %td= link_to 'Show', album
-        %td= link_to 'Edit', edit_album_path(album)
-        %td= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('button1'), album
+        %td= link_to t('button2'), edit_album_path(album)
+        %td= link_to t('button3'), album, method: :delete, data: { confirm: t('confirm') }
 
 %br
 
-= link_to 'New Album', new_album_path
+= link_to t('.new'), new_album_path

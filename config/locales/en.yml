@@ -29,14 +29,32 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+#Localising various strings across site
 en:
-  app_title: "Coursework App"
-  app_description: "Coursework app description"
+  app_title: Songcloud
+  app_description: A place to store all your music!
+
+  back: GlobalBack #should be in songs: show: back: -- but allowed here, edit wasn't
+  edit: GlobalEdit
+  add: GloablAdd
+
+  button1: GlobalShow
+  button2: GlobalEdit
+  button3: GlobalDestroy
+  confirm: GlobalAre you sure?
+
+  error: Globalerror
+
+  profile: GlobalProfile
+  logout: GobalLogout
+  login: GlobalLogin
+  sign_up: GlobalSign Up
 
   home:
+
     home:
-      title: My Coursework
-      welcome: Welcome to my coursework site!
+      title: Songcloud
+      welcome: Welcome to my Songcloud, the only place to store your music!
 
     contact:
       title: Contact Us
@@ -56,7 +74,26 @@ en:
       email_sent: Thank you. We will be in touch shortly.
 
   albums:
-    show:
-      addSong: Add Song
-      editSong: Edit
-      back: Back
+    index:
+      new: New Album
+
+    create:
+        new: Album was successfully created.
+    update:
+        edit: Album was successfully updated.
+    destroy:
+        remove: Album was successfully destroyed.
+
+  songs:
+    index:
+      new: New Song
+    form:
+#      prohib: prohibited this song from being saved:
+      true:
+        deny: Not allowed!
+    create:
+        new: Song was successfully created.
+    update:
+        edit: Song was successfully updated.
+    destroy:
+        remove: Song was successfully destroyed.

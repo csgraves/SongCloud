@@ -12,6 +12,8 @@
 
 ActiveRecord::Schema.define(version: 2020_11_26_210045) do
 
+  #Complete structure for database
+
   create_table "albums", force: :cascade do |t|
     t.string "title", null: false
     t.string "artist", null: false

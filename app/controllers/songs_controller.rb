@@ -1,11 +1,15 @@
 class SongsController < ApplicationController
+  #find album, song and authenticate user
   before_action :set_song, only: [:show, :edit, :update, :destroy]
   before_action :set_album, only: [:new, :create]
   before_action :authenticate_user!
+
+  #DRY methods
   # GET /songs
   # GET /songs.json
+  #Implement scope
   def index
-    @songs = Song.yser_songs(current_user)
+    @songs = Song.user_songs(current_user)
   end
 
   # GET /songs/1
@@ -29,7 +33,7 @@ class SongsController < ApplicationController
 
     respond_to do |format|
       if @song.save
-        format.html { redirect_to @song, notice: 'Song was successfully created.' }
+        format.html { redirect_to @song, notice: t('.new') }
         format.json { render :show, status: :created, location: @song }
       else
         format.html { render :new }
@@ -43,7 +47,7 @@ class SongsController < ApplicationController
   def update
     respond_to do |format|
       if @song.update(song_params)
-        format.html { redirect_to @song, notice: 'Song was successfully updated.' }
+        format.html { redirect_to @song, notice: t('.edit') }
         format.json { render :show, status: :ok, location: @song }
       else
         format.html { render :edit }
@@ -57,8 +61,8 @@ class SongsController < ApplicationController
   def destroy
     @song.destroy
     respond_to do |format|
-      format.html { redirect_to songs_url, notice: 'Song was successfully destroyed.' }
-      format.js { flash[:notice] = 'Song was successfully destroyed.'}
+      format.html { redirect_to songs_url, notice: t('.remove') }
+      format.js { flash[:notice] = t('.remove') } #handle JS
       format.json { head :no_content }
     end
   end

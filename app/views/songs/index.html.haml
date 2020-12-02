@@ -20,10 +20,10 @@
         %td= song.artist
         %td= song.genre
         %td= song.favourite
-        %td= link_to 'Show', song
-        %td= link_to 'Edit', edit_song_path(song)
-        %td= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('button1'), song
+        %td= link_to t('button2'), edit_song_path(song)
+        %td= link_to t('button3'), song, method: :delete, data: { confirm: t('confirm') }
 
 %br
 
-= link_to 'New Song', new_song_path
+= link_to t('.new'), new_song_path

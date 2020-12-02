@@ -12,15 +12,16 @@
 %table
   %tbody
     - @album.songs.each do |song|
+      <!-- Pick out row-->
       %tr{id: "song_#{song.id}"}
       %td= song.title
-      %td= link_to 'Show', song
-      %td= link_to 'Edit', edit_song_path(song)
-      %td= link_to 'Destroy', song, :method => :delete, :data => { :confirm => 'Are you sure?' }, :remote => true
+      %td= link_to t('button1'), song
+      %td= link_to t('button2'), edit_song_path(song)
+      %td= link_to t('button3'), song, :method => :delete, :data => { :confirm => t('confirm') }, :remote => true
+      <!-- AJAX request-->
 
+%p= link_to t('add'), new_song_path(album_id: @album)
 
-%p= link_to t('.addSong'), new_song_path(album_id: @album)
-
-= link_to t('.editSong'), edit_album_path(@album)
+= link_to t('edit'), edit_album_path(@album)
 \|
 = link_to t('back'), albums_path

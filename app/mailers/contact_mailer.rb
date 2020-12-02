@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-
+  #Email sending method
   def contact_email(email, name, telephone, message)
     @email = email
     @name = name
