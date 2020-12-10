@@ -9,7 +9,7 @@ class HomeController < ApplicationController
 
   #Post method
   def request_contact
-    name = params[:name]
+    name = params[contact:name]
     email = params[:email]
     telephone = params[:telephone]
     message = params[:message]

@@ -8,9 +8,9 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
   #Test homepage displays correctly
   test "should get home" do
     get root_url
-    assert_select 'title', 'Songcloud'
-    assert_select 'h1', 'Songcloud'
-    assert_select 'p', 'Welcome to my Songcloud, the only place to store your music!'
+    assert_select 'title', 'SongCloud'
+    assert_select 'h1', 'SongCloud'
+    assert_select 'p', 'Welcome to SongCloud, the only place to store your music!'
 
 
     assert_response :success
@@ -23,7 +23,7 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
 
     assert_template layout: 'application'
 
-    assert_select 'title', 'Songcloud'
+    assert_select 'title', 'SongCloud'
     assert_select 'h1', 'Contact Us'
     assert_select 'p', 'Complete the following form to get in touch with us.'
 

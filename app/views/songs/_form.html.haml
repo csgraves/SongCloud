@@ -1,4 +1,7 @@
-= form_for @song do |f|
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js">
+</script>
+
+= form_for @song, :html => {:id => "SongForm"} do |f|
   - if @song.errors.any?
     #error_explanation
       %h2= "#{pluralize(@song.errors.count, t('error'))} prohibited this song from being saved:"

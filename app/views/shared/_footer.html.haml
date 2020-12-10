@@ -1,3 +1,6 @@
 <!-- Basic time footer  -->
 %footer
   %p!= "&copy; #{t('app_title')} #{Time.now.year}"
+  %input#smallb{onclick: "SetFontSize('80%')", type: "button", class: "btn btn-primary btn-xs", value: "Small"}
+  %input#mediumb{onclick: "SetFontSize('100%')", type: "button", class: "btn btn-primary btn-xs", value: "Medium"}
+  %input#largeb{onclick: "SetFontSize('120%')", type: "button", class: "btn btn-primary btn-xs", value: "Large"}

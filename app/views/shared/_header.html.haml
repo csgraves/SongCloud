@@ -1,15 +1,35 @@
 <!-- Links to login -->
-%nav
-  - if user_signed_in?
-    = "#{current_user.email} |"
-    = link_to t('profile'), edit_user_registration_path
-    = '|'
-    = link_to t('logout'), destroy_user_session_path, method: 'delete'
-  - else
-    = link_to t('login'), new_user_session_path
-    = '|'
-    = link_to t('sign_up'), new_user_registration_path
 
 
-- flash.each do |key, value|
-  = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
+
+%nav.navbar.navbar-inverse
+  .container-fluid
+    .navbar-header
+      %a.navbar-brand #{t('app_title')}
+    %ul.nav.navbar-nav
+      %li.active
+        %a{:href => "/"} #{t('navHome')}
+      %li
+        %a{:href => "/albums"} #{t('navAlbums')}
+      %li
+        %a{:href => "/songs"} #{t('navSongs')}
+      %li
+        %a{:href => "/contact"} #{t('navContact')}
+
+
+
+
+    %rnav
+      - if user_signed_in?
+        = "#{current_user.email} |"
+        = link_to t('profile'), edit_user_registration_path
+        = '|'
+        = link_to t('logout'), destroy_user_session_path, method: 'delete'
+      - else
+        = link_to t('login'), new_user_session_path
+        = '|'
+        = link_to t('sign_up'), new_user_registration_path
+
+
+    - flash.each do |key, value|
+      = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?

@@ -1,4 +1,5 @@
-= form_for @album do |f|
+
+= form_for @album, :html => {:id => "AlbumForm"} do |f|
   - if @album.errors.any?
     #error_explanation
       %h2= "#{pluralize(@album.errors.count, t('error'))} prohibited this album from being saved:"

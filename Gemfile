@@ -70,3 +70,6 @@ gem 'modernizr-rails'
 gem 'rails-controller-testing'
 #Authentication
 gem 'devise'
+#JQuery
+gem 'jquery-rails'
+gem 'jquery-validation-rails'

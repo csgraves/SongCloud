@@ -31,30 +31,35 @@
 
 #Localising various strings across site
 en:
-  app_title: Songcloud
+  app_title: SongCloud
   app_description: A place to store all your music!
 
-  back: GlobalBack #should be in songs: show: back: -- but allowed here, edit wasn't
-  edit: GlobalEdit
-  add: GloablAdd
+  navHome: Home
+  navAlbums: Albums
+  navSongs: Songs
+  navContact: Contact
 
-  button1: GlobalShow
-  button2: GlobalEdit
-  button3: GlobalDestroy
-  confirm: GlobalAre you sure?
+  back: Back #should be in songs: show: back: -- but allowed here, edit wasn't
+  edit: Edit
+  add: Add
 
-  error: Globalerror
+  button1: Show
+  button2: Edit
+  button3: Destroy
+  confirm: Are you sure?
 
-  profile: GlobalProfile
-  logout: GobalLogout
-  login: GlobalLogin
-  sign_up: GlobalSign Up
+  error: error
+
+  profile: Profile
+  logout: Logout
+  login: Login
+  sign_up: Sign Up
 
   home:
 
     home:
-      title: Songcloud
-      welcome: Welcome to my Songcloud, the only place to store your music!
+      title: SongCloud
+      welcome: Welcome to SongCloud, the only place to store your music!
 
     contact:
       title: Contact Us
@@ -88,7 +93,6 @@ en:
     index:
       new: New Song
     form:
-#      prohib: prohibited this song from being saved:
       true:
         deny: Not allowed!
     create:
