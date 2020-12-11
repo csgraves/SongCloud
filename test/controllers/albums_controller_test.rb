@@ -56,4 +56,12 @@ class AlbumsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to albums_url
   end
+
+  #No login access denied
+  test "should not show albums" do
+    sign_out @user
+    get albums_url
+    assert_redirected_to user_session_url
+
+  end
 end

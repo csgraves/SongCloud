@@ -57,4 +57,11 @@ class SongsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to songs_url
   end
+
+  #No login access denied
+  test "should not show songs" do
+    sign_out @user
+    get songs_url
+    assert_redirected_to user_session_url
+  end
 end
